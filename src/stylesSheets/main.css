@@ -1,1 +1,6 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+.navbar_component {
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid #DFE0E3;
+}
+/*# sourceMappingURL=main.css.map */

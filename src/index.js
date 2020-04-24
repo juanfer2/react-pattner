@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
 import './index.css';
@@ -6,10 +6,16 @@ import './stylesSheets/main.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+
+import { Provider } from 'react-redux';
+import store from './flux/store'
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Suspense fallback={'...'}>  
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </Suspense>,
   document.getElementById('root')
 );
 
